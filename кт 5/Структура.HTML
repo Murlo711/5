@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Файловый загрузчик</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #drop-area {
+            border: 2px dashed #ccc;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #file-input {
+            display: none;
+        }
+        .file-preview {
+            margin: 10px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Загрузите файл</h1>
+
+<div id="drop-area">
+    <p>Перетащите файлы сюда или <span id="file-select">выберите файл</span></p>
+    <input type="file" id="file-input" multiple>
+</div>
+
+<h2>Содержимое файла:</h2>
+<div id="file-content" class="file-preview"></div>
+
+<button id="get-location">Получить местоположение</button>
+<div id="location-output"></div>
+
+<button id="take-photo">Сделать фото с веб-камеры</button>
+<video id="video" width="320" height="240" autoplay></video>
+<button id="snap">Сделать снимок</button>
+<canvas id="canvas" width="320" height="240"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
